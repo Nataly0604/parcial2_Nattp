@@ -11,11 +11,11 @@ export class Serie {
   @Column('varchar', { length: 5000 })
   sinopsis: string;
 
-  @Column('varchar', { length: 100 })
-  director: string;
+  @Column('varchar', { name: 'tipo_clasificacion', length: 500  })
+  tipoClasificacion:string
 
   @Column('varchar', { length: 100 })
-  categoria: string;
+  director: string;
 
   @Column('int')
   temporadas: number;
@@ -23,3 +23,4 @@ export class Serie {
   @CreateDateColumn({ name: 'fecha_estreno' })
   fechaEstreno: Date;
 }
+
